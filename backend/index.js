@@ -37,6 +37,10 @@ app.use(
 
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  res.send("Backend is deployed successfully 🚀");
+});
+
 app.use("/", authRoute);
 
 app.get("/allHoldings", async (req, res) => {
